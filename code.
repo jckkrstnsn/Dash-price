@@ -1,0 +1,10 @@
+function fetchDashPrice() {
+  return fetch("https://min-api.cryptocompare.com/data/price?fsym=DASH&tsyms=USD")
+    .then(response => response.json())
+    .then(data => data.USD);
+}
+
+You can call this function and use the returned value to display the current price of Dash in your application.
+
+
+fetchDashPrice().then(price => console.log(price))
